@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps-container{
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+.bar{
+    position: absolute;
+    background-color: aqua;
+    top: calc(50% - 15px);
+    height: 5px;
+    z-index: -1;
+    width: 0%;
+    max-width: 100%;
+    transition: 0.4s ease;
+}
+
+.list::before{
+    content: '';
+    position: absolute;
+    background-color: #dedede;
+    height: 5px;
+    width: 100%;
+    top: calc(50% - 15px);
+    z-index: -1;
+}
+
+
+.steps-container .list{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+}
+
+.steps-container .list .steps{
+    display: inline;
+}
+
+.steps-container .list .steps div{
+    --color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    color: grey;
+    background-color: azure;
+    border-radius: 100%;
+    border: 5px solid;
+    border-color: var(--color);
+    transition: .4s ease;
+}
+
+.steps-container .list .active div{
+    --color: aqua;
+    /* border-color: aqua; */
+}
+
+.button{
+    width: 100px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: aqua;
+    border: solid 1px skyblue;
+    border-radius: 5px;
+    color:whitesmoke;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:disabled{
+    background-color: dimgray;
+}
