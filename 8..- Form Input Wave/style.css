@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color:#804141;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+    gap: 20px;
+    padding: 25px;
+    background-color: #663131;
+    border-radius: 10px;
+}
+
+.container h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+body .container form .input{
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+}
+
+body .container form .input .text{
+    position: absolute;
+    top: 0px;
+    padding: 0;
+    pointer-events: none;
+    color: white;
+}
+
+.container form .input label span{
+    display: inline-block;
+    font-size: 1.8rem;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container form .input .text-active{
+    transform: translateY(-20px);
+}
+
+.container form .input input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    padding: 5px;
+    display: block;
+    border-bottom: 2px solid white;
+}
+
+body .container form button{
+    width: 100%;
+    align-self: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #421616;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+
+button:focus {
+    outline: 0;
+  }
+  
+button:active {
+    transform: scale(0.98);
+  }
+
+body .container p{
+    margin: 15px 0;
+    font-size: 1.6rem;
+    color: white;
+}
+
+body .container p a{
+    color: #1f1212;
+}
+
+input:focus + label span,
+input:valid + label span {
+  transform: translateY(-30px);
+}
